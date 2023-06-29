@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ebb.library.library.LibraryController">
+   <children>
+      <GridPane fx:id="gridPaneOptionsMain" prefHeight="69.0" prefWidth="550.0" style="-fx-background-color: #329696;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="imageViewOptionsMainUsers" fitHeight="55.0" fitWidth="61.0" layoutX="450.0" layoutY="10.0" onMouseClicked="#onOptionsUsers" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsMainUsers.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsMainBooks" fitHeight="55.0" fitWidth="58.0" onMouseClicked="#onOptionsBooks" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsMainBooks.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsMainBorrowing" fitHeight="55.0" fitWidth="54.0" layoutX="141.0" layoutY="10.0" onMouseClicked="#onOptionsBorrowing" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsMainBorrowing.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsMainReturning" fitHeight="55.0" fitWidth="55.0" layoutX="230.0" layoutY="10.0" onMouseClicked="#onOptionsReturning" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsMainReturning.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsMainExit" fitHeight="55.0" fitWidth="60.0" layoutX="340.0" layoutY="10.0" onMouseClicked="#onOptionsExit" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsMainExit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneReturning" layoutY="69.0" prefHeight="316.0" prefWidth="550.0" style="-fx-background-color: #4bbe96;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="314.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="118.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelReturningUser" text="User:" textFill="WHITE" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="0.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelReturningBook" layoutX="10.0" layoutY="100.0" text="Book:" textFill="WHITE" GridPane.rowIndex="2" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="0.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="textFieldReturningUserCode" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="imageViewReturningUserSearch" fitHeight="55.0" fitWidth="52.0" onMouseClicked="#onReturningUserSearch" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondarySearch.png" />
+               </image>
+               <effect>
+                  <DropShadow height="6.9" offsetY="1.0" radius="2.95" width="6.9">
+                     <color>
+                        <Color opacity="0.44126078486442566" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imageViewReturningUserBack" fitHeight="32.0" fitWidth="32.0" layoutX="472.0" layoutY="153.0" onMouseClicked="#onReturningUserBack" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@optionsSecondaryBack.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFieldReturningUserName" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldReturningBookISBN" layoutX="201.0" layoutY="116.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="imageViewReturningBookSearch" fitHeight="55.0" fitWidth="52.0" layoutX="447.0" layoutY="23.0" onMouseClicked="#onReturningBookSearch" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondarySearch.png" />
+               </image>
+               <effect>
+                  <DropShadow height="6.9" offsetY="1.0" radius="2.95" width="6.9">
+                     <color>
+                        <Color opacity="0.44126078486442566" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imageViewReturningBookBack" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#onReturningBookBack" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@optionsSecondaryBack.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFieldReturningBookTitle" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneBorrowing" layoutY="69.0" prefHeight="316.0" prefWidth="550.0" style="-fx-background-color: #4bbe96;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="314.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="118.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelBorrowingUser" text="User:" textFill="WHITE" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelBorrowingBook" layoutX="10.0" layoutY="100.0" text="Book:" textFill="WHITE" GridPane.rowIndex="2" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="textFieldBorrowingUserCode" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="imageViewBorrowingUserSearch" fitHeight="55.0" fitWidth="52.0" onMouseClicked="#onBorrowingUserSearch" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondarySearch.png" />
+               </image>
+               <effect>
+                  <DropShadow height="6.9" offsetY="1.0" radius="2.95" width="6.9">
+                     <color>
+                        <Color opacity="0.44126078486442566" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imageViewBorrowingUserBack" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#onBorrowingUserBack" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@optionsSecondaryBack.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFieldBorrowingUserName" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldBorrowingBookISBN" layoutX="201.0" layoutY="116.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="imageViewBorrowingBookSearch" fitHeight="55.0" fitWidth="52.0" layoutX="447.0" layoutY="23.0" onMouseClicked="#onBorrowingBookSearch" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondarySearch.png" />
+               </image>
+               <effect>
+                  <DropShadow height="6.9" offsetY="1.0" radius="2.95" width="6.9">
+                     <color>
+                        <Color opacity="0.44126078486442566" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imageViewBorrowingBookBack" fitHeight="32.0" fitWidth="32.0" layoutX="472.0" layoutY="33.0" onMouseClicked="#onBorrowingBookBack" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@optionsSecondaryBack.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFieldBorrowingBookTitle" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneBooks" layoutY="69.0" prefHeight="316.0" prefWidth="550.0" style="-fx-background-color: #4bbe96;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="260.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelBooksISBN" text="ISBN:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelBooksTitle" layoutX="10.0" layoutY="21.0" text="Title:" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelBooksPublisher" layoutX="10.0" layoutY="100.0" text="Publisher:" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelBooksCopies" layoutX="10.0" layoutY="179.0" text="Copies:" textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="textFieldBooksISBN" disable="true" GridPane.columnIndex="1" GridPane.columnSpan="3">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldBooksTitle" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldBooksPublisher" disable="true" layoutX="201.0" layoutY="116.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldBooksCopies" disable="true" layoutX="201.0" layoutY="37.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="labelBooksBorrowers" layoutX="26.0" layoutY="274.0" text="Borrowers:" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxBooksBorrowers" disable="true" prefHeight="25.0" prefWidth="238.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin></ComboBox>
+            <Label fx:id="labelBooksCover" layoutX="26.0" layoutY="97.0" text="Cover:" textFill="WHITE" GridPane.rowIndex="3" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelBooksOutline" layoutX="26.0" layoutY="157.0" text="Outline:" textFill="WHITE" GridPane.rowIndex="5" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextArea fx:id="textAreaBooksCover" disable="true" prefHeight="40.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin></TextArea>
+            <TextArea fx:id="textAreaBooksOutline" disable="true" layoutX="146.0" layoutY="140.0" prefHeight="40.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextArea>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneUsers" layoutY="69.0" prefHeight="316.0" prefWidth="550.0" style="-fx-background-color: #4bbe96;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.0" minWidth="10.0" prefWidth="430.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelUsersCode" text="Code:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="labelUsersFirstName" layoutX="10.0" layoutY="21.0" text="First Name:" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelUsersLastName" layoutX="10.0" layoutY="100.0" text="Last Name:" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelUsersBirthdate" layoutX="10.0" layoutY="179.0" text="Birthdate:" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="textFieldUsersCode" disable="true" prefHeight="25.0" prefWidth="375.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="textFieldUsersFirstName" disable="true" layoutX="201.0" layoutY="37.0" prefHeight="25.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldUsersLastName" disable="true" layoutX="201.0" layoutY="116.0" prefHeight="25.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker fx:id="datePickerUsersBirthdate" disable="true" promptText="Format: yyyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </GridPane.margin>
+            </DatePicker>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneOptionsUsersBooksConfirmCancel" layoutY="383.0" prefHeight="69.0" prefWidth="550.0" style="-fx-background-color: #329696;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="150.0" minHeight="0.0" prefHeight="69.0" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="imageViewOptionsSecondaryConfirm" fitHeight="62.0" fitWidth="65.0" onMouseClicked="#onOptionsConfirm" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondaryConfirm.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsSecondaryCancel" fitHeight="62.0" fitWidth="64.0" onMouseClicked="#onOptionsCancel" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondaryCancel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridPaneOptionsUsersBooksDefault" layoutY="383.0" prefHeight="69.0" prefWidth="550.0" style="-fx-background-color: #329696;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="150.0" minHeight="0.0" prefHeight="69.0" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="imageViewOptionsSecondarySearch" fitHeight="62.0" fitWidth="67.0" onMouseClicked="#onUsersBooksSearch" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondarySearch.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsSecondaryAdd" fitHeight="62.0" fitWidth="65.0" onMouseClicked="#onUsersBooksAdd" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondaryAdd.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsSecondaryEdit" fitHeight="62.0" fitWidth="64.0" onMouseClicked="#onUsersBooksEdit" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondaryEdit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewOptionsSecondaryDelete" fitHeight="62.0" fitWidth="64.0" layoutX="323.0" layoutY="13.0" onMouseClicked="#onUsersBooksDelete" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@optionsSecondaryDelete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
